@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SocialLoginModule, AuthServiceConfig,GoogleLoginProvider, FacebookLoginProvider} from 'ng4-social-login';
+import { UsuarioComponent } from './usuario/usuario.component';
+import { AdminComponent } from './admin/admin.component';
 
 const config = new AuthServiceConfig([
   {
@@ -27,7 +29,9 @@ export function provideConfig(){
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    UsuarioComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
