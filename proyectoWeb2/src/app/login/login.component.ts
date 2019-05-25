@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthService, SocialUser, GoogleLoginProvider, FacebookLoginProvider} from 'ng4-social-login';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { auth } from 'firebase/app';
+import { LocalStorage } from '@ngx-pwa/local-storage';
+import { Router } from '@angular/router';
+
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -7,23 +13,62 @@ import {AuthService, SocialUser, GoogleLoginProvider, FacebookLoginProvider} fro
 })
 export class LoginComponent implements OnInit {
 
-  public user: any = SocialUser;
-  constructor(private socialAuthService: AuthService) { }
+  
+  public name: string;
+  public email: string;
+  public photo: string;
+
+  constructor(
+    public afAuth: AngularFireAuth,
+    public localStorage: LocalStorage,
+    public router: Router
+    
+    ) { }
   ngOnInit() {
   }
 
-  facebookLogin(){
-    this.socialAuthService.signIn(FacebookLoginProvider.PROVIDER_ID).then((userData)=>{
-      this.user = userData;
+  onLoginGoogle(){
+    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider()).then((userData)=>{
+      this.name = userData.user.displayName;
+      this.email = userData.user.email;
+      this.photo = userData.user.photoURL;
+
+      sessionStorage.setItem("username", this.name);
+      sessionStorage.setItem("email", this.email);
+      sessionStorage.setItem("photo", this.photo);
+
+      //this.router.navigate(['/Usuario']);
+
     });
+
+    console.log(this.name);
+    console.log(this.email);
+    console.log(this.photo);
+  }
+  
+  onLoginFacebook(){
+    this.afAuth.auth.signInWithPopup(new auth.FacebookAuthProvider()).then((userData)=>{
+      this.name = userData.user.displayName;
+      this.email = userData.user.email;
+      this.photo = userData.user.photoURL;
+
+      sessionStorage.setItem("username", this.name);
+      sessionStorage.setItem("email", this.email);
+      sessionStorage.setItem("photo", this.photo);
+      //this.router.navigate(['/Usuario']);
+
+    });
+
+    console.log(this.name);
+    console.log(this.email);
+    console.log(this.photo);
+      
+    
+
   }
 
-  googleLogin(){
-    this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID).then((userData)=>{
-      this.user = userData;
-    });
-
-    console.log(this.user);
+  onLogOut(){
+    this.afAuth.auth.signOut();
+    
   }
-
 }
