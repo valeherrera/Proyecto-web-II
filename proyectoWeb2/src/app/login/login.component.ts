@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
-import {AuthService, SocialUser, GoogleLoginProvider, FacebookLoginProvider} from 'ng4-social-login';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-=======
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth } from 'firebase/app';
 import { LocalStorage } from '@ngx-pwa/local-storage';
@@ -10,7 +6,6 @@ import { Router } from '@angular/router';
 
 
 
->>>>>>> social-login
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
