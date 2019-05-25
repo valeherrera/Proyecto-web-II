@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AuthService, SocialUser, GoogleLoginProvider, FacebookLoginProvider} from 'ng4-social-login';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

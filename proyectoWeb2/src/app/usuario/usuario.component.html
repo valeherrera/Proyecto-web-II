@@ -1,4 +1,56 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <span class="navbar-brand text-light">DoingFunctions</span>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                        <a class="nav-link" href="#"> 
+                            <img src="../assets/user.png" alt="">
+                        </a>
+                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Logout</a>
+                </li>
+            </ul>
+        </div>
+</nav>
+<div class="formulario">
+        <form>
+            <div class="form-group">
+                <label for="formGroupExampleInput">Name</label>
+                <input type="text" class="form-control" id="formGroupExampleInput">
+            </div>
+            <div class="form-group">
+                <label for="formGroupExampleInput2">Description</label>
+                <input type="text" class="form-control" id="formGroupExampleInput2">
+            </div>
+            <div class="form-group">
+                    <label for="formGroupExampleInput2">Targets</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2">
+            </div>
+            <div class="form-group">
+                    <label for="formGroupExampleInput2">Dependencies</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2">
+            </div>
+                
+        </form>
+</div>
+
+
+<div class="contenedor">
+        <ngx-codemirror 
+        [(ngModel)]="content" 
+        [options]="{
+            lineNumbers: true,
+            theme: 'material',
+            mode: 'javascript'
+        }"
+        class="console"></ngx-codemirror>
+        <button class="button">Add function</button>
+</div>
+
+
+
 

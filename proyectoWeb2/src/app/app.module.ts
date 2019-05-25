@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import {of, fromEvent} from 'rxjs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +8,8 @@ import { LoginComponent } from './login/login.component';
 import { SocialLoginModule, AuthServiceConfig,GoogleLoginProvider, FacebookLoginProvider} from 'ng4-social-login';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { AdminComponent } from './admin/admin.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { CodemirrorModule } from '@ctrl/ngx-codemirror';
 
 const config = new AuthServiceConfig([
   {
@@ -31,13 +32,15 @@ export function provideConfig(){
     AppComponent,
     LoginComponent,
     UsuarioComponent,
-    AdminComponent
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    SocialLoginModule
+    SocialLoginModule,
+    LayoutModule,
+    CodemirrorModule
   ],
   providers: [{provide: AuthServiceConfig, useFactory: provideConfig}],
   bootstrap: [AppComponent]
