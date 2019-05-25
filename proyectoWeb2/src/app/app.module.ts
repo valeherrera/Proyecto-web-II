@@ -1,31 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+<<<<<<< HEAD
+=======
+import { of, fromEvent} from 'rxjs';
+import { environment } from '../environments/environment';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFireAuth } from '@angular/fire/auth';
+import {NgxWebstorageModule} from 'ngx-webstorage';
+
+
+>>>>>>> social-login
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
+<<<<<<< HEAD
 import { SocialLoginModule, AuthServiceConfig,GoogleLoginProvider, FacebookLoginProvider} from 'ng4-social-login';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { AdminComponent } from './admin/admin.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { CodemirrorModule } from '@ctrl/ngx-codemirror';
+=======
+>>>>>>> social-login
 
-const config = new AuthServiceConfig([
-  {
-    id: GoogleLoginProvider.PROVIDER_ID,
-    provider: new GoogleLoginProvider('87001036382-slmq299lbnoph9h3i288k9hdbit9gqel.apps.googleusercontent.com')
-  },
-  {
-    id:FacebookLoginProvider.PROVIDER_ID,
-    provider: new FacebookLoginProvider('364144991115274')
-  }
 
-], false)
+import { UsuarioComponent } from './usuario/usuario.component';
+import { AdminComponent } from './admin/admin.component';
 
-export function provideConfig(){
-  return config;
-}
 
 @NgModule({
   declarations: [
@@ -38,11 +41,18 @@ export function provideConfig(){
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+<<<<<<< HEAD
     SocialLoginModule,
     LayoutModule,
     CodemirrorModule
+=======
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    NgxWebstorageModule.forRoot()
+>>>>>>> social-login
   ],
-  providers: [{provide: AuthServiceConfig, useFactory: provideConfig}],
+  providers: [AngularFireAuth],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
