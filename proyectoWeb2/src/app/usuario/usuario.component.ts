@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BaseDatosService } from '../services/base-datos.service';
+import { Funcion } from '../models/funcion';
 
 @Component({
   selector: 'app-usuario',
@@ -6,10 +8,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./usuario.component.css']
 })
 export class UsuarioComponent implements OnInit {
-
-  constructor() { }
+  
+  private funcion:  Funcion[];
+  private FuncionSeleccionada:  Funcion  = { usuario: " ", descripción: " ", codigo: " ", etiqueta: " ", nombre: " "};
+  private nombresP: string
+  
+  constructor(
+    private baseDatos: BaseDatosService
+  ) { }
 
   ngOnInit() {
+
   }
 
+  ObtenerFunciones (){
+
+    console.log("llegó");
+    
+    this.baseDatos.leerFuncion().subscribe((nombres)=>{
+      this.nombresP = nombres;
+      console.log(this.nombresP);
+    })
+
+    console.log("salió");    
+
+  }
 }

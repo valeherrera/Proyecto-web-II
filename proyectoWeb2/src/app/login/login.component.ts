@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 
 
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -22,6 +23,7 @@ export class LoginComponent implements OnInit {
     public afAuth: AngularFireAuth,
     public localStorage: LocalStorage,
     public router: Router
+  
     
     ) { }
   ngOnInit() {
@@ -37,7 +39,7 @@ export class LoginComponent implements OnInit {
       sessionStorage.setItem("email", this.email);
       sessionStorage.setItem("photo", this.photo);
 
-      //this.router.navigate(['/Usuario']);
+      this.router.navigate(['/usuario']);
 
     });
 
