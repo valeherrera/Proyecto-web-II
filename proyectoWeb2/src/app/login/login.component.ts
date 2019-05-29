@@ -4,17 +4,14 @@ import { auth } from 'firebase/app';
 import { LocalStorage } from '@ngx-pwa/local-storage';
 import { Router } from '@angular/router';
 
-
-
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
 
-  
   public name: string;
   public email: string;
   public photo: string;
@@ -23,7 +20,6 @@ export class LoginComponent implements OnInit {
     public afAuth: AngularFireAuth,
     public localStorage: LocalStorage,
     public router: Router
-  
     
     ) { }
   ngOnInit() {

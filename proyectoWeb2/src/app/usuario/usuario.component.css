@@ -32,6 +32,7 @@
 }
 
 .button {
+
     position: relative;
     background-color:aliceblue;
     border: 1px solid #FFFFFF;
@@ -43,8 +44,17 @@
     color: #032f3c;
     margin-top: 20px;
     left: 500px;
+    
 }
 
 .container-fluid {
     background-color: #026a81;
+}
+
+#coloring{
+
+   color: white;
+   font-size: 25px;
+   margin-top: 3px;
+
 }
