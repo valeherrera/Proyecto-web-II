@@ -12,11 +12,11 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SocialLoginModule, AuthServiceConfig,GoogleLoginProvider, FacebookLoginProvider} from 'ng4-social-login';
 import { UsuarioComponent } from './usuario/usuario.component';
-import { AdminComponent } from './admin/admin.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { CodemirrorModule } from '@ctrl/ngx-codemirror';
 import { HttpClientModule } from '@angular/common/http';
 import { BaseDatosService} from './services/base-datos.service';
+import { BuscarComponent } from './buscar/buscar.component';
 
 
 @NgModule({
@@ -24,7 +24,7 @@ import { BaseDatosService} from './services/base-datos.service';
     AppComponent,
     LoginComponent,
     UsuarioComponent,
-    AdminComponent,
+    BuscarComponent
   ],
   imports: [
     BrowserModule,
