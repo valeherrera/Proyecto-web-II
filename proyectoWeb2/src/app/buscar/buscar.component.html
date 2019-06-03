@@ -41,4 +41,26 @@
   </a>
 </div>
 
-
+<div class="container">
+    <table id="tablaFunciones" *ngIf="busqueda(); else nada">
+      <tr>
+          <th>Name</th>
+          <th>Created by</th>
+          <th>Description</th>
+          <th>Dependencies</th>
+          <th>Download</th>
+      </tr>
+      <tr *ngFor="let item of funciones">
+          <td>{{item.nombre}} </td>
+          <td>{{item.usuario}} </td>
+          <td>{{item.descripcion}} </td>
+          <td>{{item.dependencias}} </td>
+          <td align="center">
+            <a href="#">
+                <i class="fas fa-download" id="icon"></i>
+            </a>
+          </td>
+     </tr> 
+    </table>
+    <ng-template #nada><p>No existe la función</p></ng-template>
+</div>

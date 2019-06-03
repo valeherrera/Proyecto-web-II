@@ -61,3 +61,40 @@
     line-height: 40px;
     width: 600px;
 }
+
+#tablaFunciones th {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:  #026a81;
+    color: white;
+   
+}
+
+#tablaFunciones {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    border-collapse:collapse;
+    border-style: hidden;
+    margin-top: 150px;
+    width: 100%; 
+}
+  
+#tablaFunciones th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  
+}
+
+#tablaFunciones td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    background-color: white;
+}
+
+#icon {
+    color: #026a81;
+    font-size: 20px;
+}
+
+
