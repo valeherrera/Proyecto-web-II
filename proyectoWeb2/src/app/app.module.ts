@@ -17,14 +17,17 @@ import { CodemirrorModule } from '@ctrl/ngx-codemirror';
 import { HttpClientModule } from '@angular/common/http';
 import { BaseDatosService} from './services/base-datos.service';
 import { BuscarComponent } from './buscar/buscar.component';
+import { MyfunctionsComponent } from './myfunctions/myfunctions.component';
 
+import { AlertModule,TooltipModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     UsuarioComponent,
-    BuscarComponent
+    BuscarComponent,
+    MyfunctionsComponent  
   ],
   imports: [
     BrowserModule,
@@ -36,7 +39,10 @@ import { BuscarComponent } from './buscar/buscar.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     NgxWebstorageModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    AlertModule.forRoot(), 
+    TooltipModule.forRoot()
+
   ],
   providers: [AngularFireAuth, BaseDatosService],
   bootstrap: [AppComponent]
