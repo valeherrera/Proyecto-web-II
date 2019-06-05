@@ -1,0 +1,97 @@
+.navbar {
+    color: #FFFFFF;
+    background-color: #032f3c;
+}
+
+.contenedor{
+    
+    background-color:#026a81;
+    position: relative;
+    width: 650px;
+    height: 480px;
+    left: 680px;
+    bottom: 530px;
+    margin: 30px 30px 20px 0px;
+    padding: 10px 10px 10px;
+    border-color: #032f3c;
+  
+}
+
+#coloring3{
+
+    color: white;
+    font-size: 25px;
+    margin-top: 3px;
+ 
+}
+
+.container-func{
+
+    background-color:#032f3c;
+    color: white; 
+    width: 200px; 
+    height: 120px; 
+    padding: 10px;
+    position: relative;
+    border-color:transparent;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   
+}
+
+.button {
+
+    position: relative;
+    background-color:aliceblue;
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+    border-right: white;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 80px;
+    padding: 6px 15px;
+    color: #032f3c;
+    
+}
+
+#coloring{
+
+    color: white;
+    font-size: 25px;
+    position: inherit;
+    left: 143px;
+    top: 20px;
+ }
+
+ #coloring2{
+
+    color: white;
+    font-size: 25px;
+    position: inherit;
+    left: 100px;
+    top: -4px;
+ }
+
+ .boton{
+     position: relative;
+     width: 1px;
+     top: -5px;
+     background-color: transparent;
+     border: none;
+ }
+
+ .boton2{
+    position: relative;
+    width: 1px;
+    background-color: transparent;
+    border: none;
+}
+
+
+.botonIcon{
+    position: relative;
+    top: 8px;
+    background-color: transparent;
+    border: none;
+}
+
+

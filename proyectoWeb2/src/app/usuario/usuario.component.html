@@ -1,26 +1,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <nav class="navbar navbar-expand-lg navbar-dark">
-    <span class="navbar-brand text-light">Skeletons</span>
+    <span class="navbar-brand text-light" id="titulo">Skeletons</span>
+
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="myfunctions">My functions</a>
+            </li>   
+                     
+        </ul>
+    </div>
+
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <div class="search-button">
             <a href="#" class="search-toggle" data-selector="#header-1"></a>
         </div>
+       
         <ul class="navbar-nav ml-auto"> 
                 <button style="background-color: #3B5998;"type="button" (click)="ObtenerFunciones()" class="btn">Probar</button> 
                 <li class="nav-item">    
-                    <a class="nav-link" href="buscar"> 
+                    <a class="nav-link" href="search"> 
                         <i class="fas fa-search" id="coloring"></i>   
                     </a>   
                  
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> 
-                        <i class="fas fa-book"  id="coloring"></i>      
-                    </a>
+                    <ng-template #template>
+                        <p><strong>User manual</strong><br>
+                            1) For add functions you can edit in the blanks of the form. <br> 2) Then write your code in
+                             JS in the panel.<br> 3) And the last to complete click on the button 'Add function'</p>
+                    </ng-template>
+
+                   <button class="botonIcon" [tooltip]="template" triggers="focus" placement="bottom">
+                        <i class="fas fa-book" id="coloring"></i>   
+                    </button>   
                 </li>
+
                 <li class="nav-item">
-                        <a class="nav-link" href="#"> 
+                        <a class="nav-link" href="user"> 
                             <img src="../assets/user.png" alt="">
                         </a>
                 </li>
@@ -47,13 +65,6 @@
                     <label for="formGroupExampleInput2">Tags</label>
                     <input type="text" class="form-control" id="formGroupExampleInput2">
             </div>
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">Dependecies</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                  <option>1</option>
-                </select>
-            </div>
-                
         </form>
 </div>
 
