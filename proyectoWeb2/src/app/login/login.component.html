@@ -2,18 +2,19 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
 
-<body style="background-color:#032f3c;">
+<body style="background-color:#032f3c; height: 100vh;">
   <br><br>
   <br>
   <div>
-    <div class="vl titulo" style="text-align: center;">
       
+    <div class="vl titulo" style="text-align: center;">
       <h2 style="font-size: 50px;">
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Skeletons&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
       <br>
       <h2 style="font-family: 'Montserrat', sans-serif; font-size: 20px;">It is an API that allows you
-        <br>to create and download functions <br>in the JavaScript programming <br>language, according to your needs </h2>
-   
+        <br>to create and download functions <br>in the JavaScript programming <br>language, according to your needs
+      </h2>
+
       <ng-template #template>
         <p><strong>User manual<br></strong></p>
         <p>To use the app you must authenticate with your Google account or the social network Facebook.</p>
@@ -22,12 +23,11 @@
       <button class="boton" [tooltip]="template" triggers="focus" placement="right">
         <i class="fas fa-book" style="background-color:transparent;color: white; font-size: 30px;"></i>
       </button>
-      
+
 
     </div>
 
     <div style="margin-left: 20%;">
-
       <br><br><br><br><br><br><br>
       <button style="background-color: rgb(18, 81, 139);" type="button" (click)="onLoginFacebook()"
         class="btn estilo-boton"><i class="fab fa-facebook-f"></i>&nbsp;&nbsp;
@@ -36,16 +36,7 @@
       <button type="button" style="background-color: rgb(160, 41, 41);" (click)="onLoginGoogle()"
         class="btn estilo-boton"><i class="fab fa-google"></i>&nbsp;&nbsp;
         Google&nbsp;&nbsp;&nbsp;&nbsp;</button>
-
-
     </div>
-
-
-
-
-
-
   </div>
-
 
 </body>

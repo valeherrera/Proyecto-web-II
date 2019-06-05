@@ -10,7 +10,7 @@ import { NgxWebstorageModule} from 'ngx-webstorage';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
-import { SocialLoginModule, AuthServiceConfig,GoogleLoginProvider, FacebookLoginProvider} from 'ng4-social-login';
+import { SocialLoginModule} from 'ng4-social-login';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { CodemirrorModule } from '@ctrl/ngx-codemirror';

@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BaseDatosService } from '../services/base-datos.service';
 import { Funcion } from '../models/funcion';
-//import {BsModalService} from 'ngx-bootstrap/modal';
-//import {BsModalRef} from 'ngx-bootstrap/modal/bs-modal-ref.service';
 
 @Component({
   selector: 'app-usuario',
