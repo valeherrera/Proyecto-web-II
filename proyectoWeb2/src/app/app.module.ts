@@ -18,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BaseDatosService} from './services/base-datos.service';
 import { BuscarComponent } from './buscar/buscar.component';
 
+import { TooltipModule, AlertModule } from 'ngx-bootstrap';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,9 @@ import { BuscarComponent } from './buscar/buscar.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     NgxWebstorageModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,
+    AlertModule.forRoot(),
+    TooltipModule.forRoot()
   ],
   providers: [AngularFireAuth, BaseDatosService],
   bootstrap: [AppComponent]

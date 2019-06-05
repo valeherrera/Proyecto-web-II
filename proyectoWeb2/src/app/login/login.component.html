@@ -1,27 +1,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 
-<body style="background-color: #2C8870;">
 
-  <section id="banner">
-    <img class="imagen-fondo" src="../assets/imagenes/fondo.jpg">
-    <div class="contenedor">
-      <div class="imagen-user card">
-        <i class="far fa-user" style=" font-size: 70px; margin-left: 20%;  margin-top: 15%;"></i>
-      </div>
-
-      <br><br>
+<body style="background-color:#032f3c;">
+  <br><br>
+  <br>
+  <div>
+    <div class="vl titulo" style="text-align: center;">
       
-      <div>
-        texto
-        <button style="background-color: #3B5998;"type="button" (click)="onLoginFacebook()" class="btn estilo-boton"><i class="fab fa-facebook-f"></i>&nbsp;&nbsp;
-          Facebook&nbsp;&nbsp;&nbsp;&nbsp;</button>
-        <br><br>
-        <button type="button" style="background-color: red;"(click)="onLoginGoogle()" class="btn estilo-boton"><i class="fab fa-google"></i>&nbsp;&nbsp;
-          Google&nbsp;&nbsp;&nbsp;&nbsp;</button>
-
-      </div>
+      <h2 style="font-size: 50px;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Skeletons&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+      <br>
+      <h2 style="font-family: 'Montserrat', sans-serif; font-size: 20px;">It is an API that allows you
+        <br>to create and download functions <br>in the JavaScript programming <br>language, according to your needs </h2>
+   
+      <ng-template #template>
+        <p><strong>User manual<br></strong></p>
+        <p>To use the app you must authenticate with your Google account or the social network Facebook.</p>
+      </ng-template>
+      <br>
+      <button class="boton" [tooltip]="template" triggers="focus" placement="right">
+        <i class="fas fa-book" style="background-color:transparent;color: white; font-size: 30px;"></i>
+      </button>
+      
 
     </div>
-  </section>
+
+    <div style="margin-left: 20%;">
+
+      <br><br><br><br><br><br><br>
+      <button style="background-color: rgb(18, 81, 139);" type="button" (click)="onLoginFacebook()"
+        class="btn estilo-boton"><i class="fab fa-facebook-f"></i>&nbsp;&nbsp;
+        Facebook&nbsp;&nbsp;&nbsp;&nbsp;</button>
+      <br><br>
+      <button type="button" style="background-color: rgb(160, 41, 41);" (click)="onLoginGoogle()"
+        class="btn estilo-boton"><i class="fab fa-google"></i>&nbsp;&nbsp;
+        Google&nbsp;&nbsp;&nbsp;&nbsp;</button>
+
+
+    </div>
+
+
+
+
+
+
+  </div>
+
+
 </body>

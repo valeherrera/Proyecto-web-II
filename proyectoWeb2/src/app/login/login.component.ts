@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 
 export class LoginComponent implements OnInit {
-
+  public listaImagenes =[1,2,3,4,5,6,7,8,9];
   public name: string;
   public email: string;
   public photo: string;

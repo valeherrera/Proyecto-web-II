@@ -12,6 +12,7 @@ export class UsuarioComponent implements OnInit {
   private funcion:  Funcion[];
   private FuncionSeleccionada:  Funcion  = { usuario: " ", descripción: " ", codigo: " ", etiqueta: " ", nombre: " "};
   private nombresP: string
+  private dato = 'valeria';
   
   constructor(
     private baseDatos: BaseDatosService
@@ -25,7 +26,7 @@ export class UsuarioComponent implements OnInit {
 
     console.log("llegó");
     
-    this.baseDatos.leerFuncion().subscribe((nombres)=>{
+    this.baseDatos.leerFuncion(this.dato).subscribe(nombres=>{
       this.nombresP = nombres;
       console.log(this.nombresP);
     })

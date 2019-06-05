@@ -7,17 +7,18 @@ import { Observable } from  'rxjs';
   providedIn: 'root'
 })
 export class BaseDatosService {
-  private nombresP: Array<string>;
+
 
   constructor(
     private httpClient: HttpClient
   ) {}
 
-  private serverConn = "http://localhost/server";
+  private serverConn = "http://localhost/server/";
+  
 
 
-  leerFuncion(): Observable<string>{
-    return this.httpClient.get<string>(`${this.serverConn}/leer.php`);
+  leerFuncion(dato:string): Observable<string>{
+    return this.httpClient.get<string>(`${this.serverConn}leer.php?dato=${dato}`);
   }
 
 /*   createFuncion(funcion: Funcion): Observable<Funcion>{
