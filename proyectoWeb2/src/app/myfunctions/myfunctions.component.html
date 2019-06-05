@@ -2,6 +2,14 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark">
     <span class="navbar-brand text-light" id="titulo">Skeletons</span>
+    
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="user">Add new function</a>
+            </li>           
+        </ul>
+    </div>
 
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <div class="search-button">
@@ -9,18 +17,25 @@
         </div>
         <ul class="navbar-nav ml-auto"> 
                 <li class="nav-item">    
-                    <a class="nav-link" href="buscar"> 
+                    <a class="nav-link" href="search"> 
                         <i class="fas fa-search" id="coloring"></i>   
                     </a>   
-                 
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> 
-                        <i class="fas fa-book"  id="coloring"></i>      
-                    </a>
+                    <ng-template #template>
+                        <p><strong>User manual</strong><br>
+                            1) For add dependencies in your functions you select the 'plus' icon and you redirect to the panel for add the function<br> 
+                            2) For view the information click on the 'Info' icon and you can see the description and dependencies</p>
+                    </ng-template>
+    
+                    <button class="botonIcon" [tooltip]="template" triggers="focus" placement="bottom">
+                        <i class="fas fa-book" id="coloring3"></i>   
+                    </button>  
                 </li>
+               
                 <li class="nav-item">
-                        <a class="nav-link" href="#"> 
+                        <a class="nav-link" href="user"> 
                             <img src="../assets/user.png" alt="">
                         </a>
                 </li>

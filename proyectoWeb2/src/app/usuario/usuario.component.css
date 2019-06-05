@@ -9,13 +9,13 @@
     background-color:#026a81;
     position: relative;
     width: 650px;
-    height: 480px;
-    left: 680px;
+    height: 410px;
+    left: 650px;
     bottom: 530px;
     margin: 30px 30px 20px 0px;
     padding: 10px 10px 10px;
     border-color: #032f3c;
-  
+    
 }
 
 .formulario{
@@ -56,8 +56,13 @@
 
    color: white;
    font-size: 25px;
-   margin-top: 3px;
 
 }
 
+.botonIcon{
+    position: relative;
+    top: 8px;
+    background-color: transparent;
+    border: none;
+}
 

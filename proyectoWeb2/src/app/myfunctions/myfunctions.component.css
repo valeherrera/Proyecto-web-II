@@ -17,7 +17,7 @@
   
 }
 
-#coloring{
+#coloring3{
 
     color: white;
     font-size: 25px;
@@ -82,6 +82,14 @@
  .boton2{
     position: relative;
     width: 1px;
+    background-color: transparent;
+    border: none;
+}
+
+
+.botonIcon{
+    position: relative;
+    top: 8px;
     background-color: transparent;
     border: none;
 }

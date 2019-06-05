@@ -9,8 +9,8 @@ const routes: Routes = [
 
   { path: '', component: LoginComponent},
   { path: 'login', component: LoginComponent},
-  { path: 'usuario', component: UsuarioComponent},
-  { path: 'buscar', component: BuscarComponent},
+  { path: 'user', component: UsuarioComponent},
+  { path: 'search', component: BuscarComponent},
   { path: 'myfunctions', component: MyfunctionsComponent}
 
 ];

@@ -46,6 +46,7 @@
      display: flex;
      justify-content: center;
      align-items: center;
+    
  }
 
 
@@ -97,4 +98,15 @@
     font-size: 20px;
 }
 
+.botonIcon{
+    position: relative;
+    top: 8px;
+    background-color: transparent;
+    border: none;
+}
 
+#coloring{
+    color: white;
+    font-size: 25px;
+}
+ 
