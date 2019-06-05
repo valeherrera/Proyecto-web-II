@@ -14,14 +14,8 @@ export class UsuarioComponent implements OnInit {
   private funcion:  Funcion[];
   private FuncionSeleccionada:  Funcion  = { usuario: " ", descripción: " ", codigo: " ", etiqueta: " ", nombre: " "};
   private nombresP: string
-<<<<<<< HEAD
   private dato = 'valeria';
   
-  constructor(
-    private baseDatos: BaseDatosService
-  ) { }
-=======
-
   funciones = [{"nombre": 'suma', "usuario": 'Pame', "descripcion":'funcion aritmetica',"dependencias": ['sum1', 'sum2','sum3','sum1', 'sum2','sum3','sum1', 'sum2','sum3']},
                 {"nombre": 'suma2', "usuario": 'Vale', "descripcion":'funcion aritmetica v2',"dependencias": ['sum3', 'sum4','sum5']},
                 {"nombre": 'suma2', "usuario": 'Vale', "descripcion":'funcion aritmetica v2',"dependencias": ['sum6', 'sum7','sum8']},
@@ -29,7 +23,6 @@ export class UsuarioComponent implements OnInit {
  
 
   constructor(private baseDatos: BaseDatosService) { }
->>>>>>> b5d9529dc1fdefc34aafab6923951e364618c707
 
   ngOnInit() {
 

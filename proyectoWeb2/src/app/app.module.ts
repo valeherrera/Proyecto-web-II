@@ -19,11 +19,8 @@ import { BaseDatosService} from './services/base-datos.service';
 import { BuscarComponent } from './buscar/buscar.component';
 import { MyfunctionsComponent } from './myfunctions/myfunctions.component';
 
-<<<<<<< HEAD
 import { TooltipModule, AlertModule } from 'ngx-bootstrap';
-=======
-import { AlertModule,TooltipModule, ModalModule} from 'ngx-bootstrap';
->>>>>>> b5d9529dc1fdefc34aafab6923951e364618c707
+
 
 @NgModule({
   declarations: [
@@ -44,15 +41,10 @@ import { AlertModule,TooltipModule, ModalModule} from 'ngx-bootstrap';
     AngularFireDatabaseModule,
     NgxWebstorageModule.forRoot(),
     HttpClientModule,
-<<<<<<< HEAD
     AlertModule.forRoot(),
-    TooltipModule.forRoot()
-=======
-    AlertModule.forRoot(), 
     TooltipModule.forRoot(),
     
 
->>>>>>> b5d9529dc1fdefc34aafab6923951e364618c707
   ],
   providers: [AngularFireAuth, BaseDatosService],
   bootstrap: [AppComponent]
