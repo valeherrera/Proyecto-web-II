@@ -21,9 +21,13 @@ export class LoginComponent implements OnInit {
     public localStorage: LocalStorage,
     public router: Router
     
+    
+    
     ) { }
   ngOnInit() {
   }
+
+
 
   onLoginGoogle(){
     this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider()).then((userData)=>{

@@ -20,30 +20,8 @@ export class UsuarioComponent implements OnInit {
                 {"nombre": 'suma2', "usuario": 'Vale', "descripcion":'funcion aritmetica v2',"dependencias": ['sum1', 'sum2','sum3']}]
  
 
-  constructor(private baseDatos: BaseDatosService) { }
+  constructor() { }
 
-  ngOnInit() {
-
-  }
-    
-  ObtenerFunciones (){
-
-    console.log("llegó");
-    
-    this.baseDatos.leerFuncion(this.dato).subscribe(nombres=>{
-      this.nombresP = nombres;
-      console.log(this.nombresP);
-    })
-
-    console.log("salió");    
-
-  }
-
-
- 
-
-
-
-
+  ngOnInit() {}
 
 }

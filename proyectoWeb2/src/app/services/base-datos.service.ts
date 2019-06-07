@@ -17,10 +17,13 @@ export class BaseDatosService {
   
 
 
-  leerFuncion(dato:string): Observable<string>{
-    return this.httpClient.get<string>(`${this.serverConn}leer.php?dato=${dato}`);
+  leerFuncion(dato:string): Observable<Array<any>>{
+    return this.httpClient.get<Array<any>>(`${this.serverConn}leer.php?dato=${dato}`);
   }
 
+  obtenerDependencias(codigo:any): Observable<Array<any>>{
+    return this.httpClient.get<Array<any>>(`${this.serverConn}obtenerDependencias.php?codigo=${codigo}`);
+  }
 /*   createFuncion(funcion: Funcion): Observable<Funcion>{
     return this.httpClient.post<Funcion>(`${this.serverConn}/creaar.php`, funcion);
   }

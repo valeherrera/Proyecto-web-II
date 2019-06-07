@@ -47,9 +47,9 @@
 </nav>
 
 <div class="search-box">
-  <input class="search-txt" type="text" placeholder="Type to search">
-  <a class="search-btn" href="">
-    <i class="fas fa-search"></i>  
+  <input class="search-txt" type="text" [(ngModel)]="valor1" placeholder="Type to search" >
+  <a class="search-btn">
+    <i class="fas fa-search search-icon" (click)="ObtenerFunciones(valor1)" ></i>  
   </a>
 </div>
 
@@ -60,18 +60,13 @@
           <th>Created by</th>
           <th>Description</th>
           <th>Dependencies</th>
-          <th>Download</th>
+          
       </tr>
       <tr *ngFor="let item of funciones">
           <td>{{item.nombre}} </td>
           <td>{{item.usuario}} </td>
           <td>{{item.descripcion}} </td>
-          <td>{{item.dependencias}} </td>
-          <td align="center">
-            <a href="#">
-                <i class="fas fa-download" id="icon"></i>
-            </a>
-          </td>
+          <td>{{item.nombresDependencias}}</td>
      </tr> 
     </table>
     <ng-template #nada><p>No existe la función</p></ng-template>
